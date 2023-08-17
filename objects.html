@@ -1,0 +1,129 @@
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head> 
+
+
+        <title> Object </title>
+
+        <!-- An object groups multiple values together -->
+
+    
+</head>
+
+
+<body> 
+
+
+
+
+
+<script>
+
+
+    const  product = {
+            name : 'socks',
+            price: 1090
+    };
+
+    console.log(product);
+    console.log(product.name);
+    console.log(product.price);
+
+    product.name = 'cotton socks';
+    console.log(product);
+
+    product.newProperty = true;
+    console.log(product);
+
+    delete product.newProperty
+    console.log(product);
+
+
+    const product2 = {
+        name:'shirt',
+        ['delivery-time']: '1 day',
+        rating:{
+                stars:4.5,
+                count : 87
+        },
+        fun : function function1(){
+                console.log('function inside object'); //an function inside a object
+        }
+    };
+
+
+                // This is Java Script Orientated Language [JSON]
+
+
+/*          JSON supports double quotes ( "" )
+                                  JSON  Doesn't support Functions */
+
+//     {
+//         "name" : "shirt",
+//         ["delivery time"]:"3 days",
+//         "rating" : {
+//                 "stars" : 4.5,
+//                 "count": 87
+
+//         }
+//     }
+
+
+
+    console.log(product2);
+    console.log(product2.name);
+    console.log(product2['name']);       // we use this brackets when [product.name] - doesn't work
+    console.log(product2['delivery-time']);
+
+    console.log(product2.rating.count);
+    product2.fun();
+
+    console.log(typeof console.log);
+
+
+    //object + function = method
+
+                //  math.random()
+
+    // This are Built-in Objects
+
+        /* console.log
+                math.random
+                        JSON
+                            localStorage  */
+
+            // stringify a method for JSON object  
+
+
+
+   console.log(JSON.stringify(product2));
+
+
+   // JSON.parse  - This send an JSON object back to a JavaScript Orientated object 
+
+
+   const jsonString = JSON.stringify(product2);
+
+        console.log(JSON.parse(jsonString));
+
+
+
+
+
+
+</script>
+
+
+
+</body>
+
+
+
+
+</html>
+
+
